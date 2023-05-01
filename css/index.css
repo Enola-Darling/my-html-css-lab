@@ -43,13 +43,17 @@ hero
 }
 
 
+
+
 /*****************************
 end hero
 ******************************/
 
 
 
-/*hero wrapper*/
+/*****************************
+hero wrapper
+*****************************/
 
 .hero__wrapper{
     position: relative;
@@ -70,16 +74,15 @@ end hero
 
 }
 .hero__image img {
-    max-width: 904;
-    width: 150%;
+    max-width: 700px;
+    width: 100%;
     height: auto;
 }
-
 
 .hero__title {
     text-transform: uppercase;
     color: var(--color-dark);
-    padding-bottom: 20px;  
+    padding-bottom: 20px; 
 }
 
 .hero__description{
@@ -89,7 +92,7 @@ end hero
 
 @media screen and (max-width: 1023px) {
     .hero__text{
-        width: 100;
+        width: 100%;
     }
     .hero__image{
         width: 100%;
@@ -104,4 +107,90 @@ end hero
         width: 50%;
     }  
 }
-/*end hero wrapper*/
+
+/*****************************
+end hero wrapper
+*****************************/
+
+/******************************* 
+card blog
+*******************************/
+
+.blog{
+    position: relative;
+    width: 100%;
+
+}
+
+.blog__wrapper{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 80px;
+    flex-wrap: wrap;
+    gap: 20px;
+    z-index: -9;
+}
+
+.card{
+    max-width: 250px;
+    border-radius: 8px;
+    background-color: var(--color-light);
+    box-shadow: 0px 6px 10px rgba(0,0,0,0.8 );
+    z-index: 9;
+}
+
+.card__header {
+    position: relative;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.card__header img {
+    position: absolute;
+    max-width: 60px;
+    width: 100%;
+
+}
+
+.card__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Metropolis Semi Bold';
+}
+
+.card__content p {
+  text-align: center;
+  font-family:'Metropolis Light' ;  
+   
+}
+
+   
+
+.card__content .button {
+    display: inline-block;
+    margin-bottom: 20px;
+    
+}
+
+/******************************* 
+ end card blog
+*******************************/
+
+
+/******************************* 
+ slide 1
+*******************************/
+
+.hero:nth-child(even) .hero__wrapper2{
+
+    flex-direction: row-reverse;
+    display: flex;
+    align-items: center;
+}
