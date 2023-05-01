@@ -1,0 +1,132 @@
+@import "../assets/font/metropolis/style.css";
+@import "normalize.css";
+@import "typography.css";
+
+header {
+position: fixed;
+width: 100%;
+top: 0;
+left: 0;
+background-color: var(--color-dark);
+box-shadow: 0px 6px 10px rgba(0,0,0,0.8 );
+z-index: 9;
+}
+
+.logo{ 
+    justify-content: flex-start;
+    position:absolute;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    font-weight: 700;
+}
+    
+.main-header {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-header ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding-right: 150px;
+}
+
+.main-header li{
+    position: relative;
+    padding: 10px;
+}
+
+.main-header ul a{
+    color: var(--color-light);
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+    
+.main-header li::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-secondary);
+    transition: width 0.25s ease-in-out;
+}
+
+.main-header li::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-secondary);
+    transition: width 0.25s ease-in-out;
+}
+
+.main-header li:hover::after{
+    width: 100%;
+}
+.main-header li:hover::before{
+    width: 100%;
+}
+    
+}
+
+.container {
+    max-width: 1920;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.button {
+    position: relative;
+    text-decoration: none;
+    background-color: var(--color-secondary);
+    color: var(--color-dark);
+    padding: 8px 20px ;
+    text-transform: uppercase;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: width 0.25s ease-in-out;
+}
+
+.button span {
+    position: relative;
+    z-index: 1;
+}
+
+.button:hover {
+    color: var(--color-light);
+}
+
+.button::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--color-dark);
+    border-radius: 8px;
+    transition: width 0.25s ease-in-out;
+}
+
+.button:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--color-dark);
+    border-radius: 8px;
+}
